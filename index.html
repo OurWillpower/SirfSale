@@ -8,28 +8,35 @@
 body {
 margin:0;
 font-family:'Segoe UI';
-background:linear-gradient(135deg,#000,#111);
+background:#000;
 color:white;
 text-align:center;
 }
 
 /* HERO */
 .hero {
-padding:100px 20px;
-background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
-background-blend-mode:overlay;
-background-color:rgba(0,0,0,0.7);
+padding:80px 20px;
+background:linear-gradient(#000,#111);
 }
 
-.hero h1 {
-color:gold;
-font-size:40px;
+.hero h1 { color:gold; font-size:38px; }
+
+.hero p { color:#bbb; max-width:600px; margin:auto; }
+
+/* ACTION BUTTONS */
+.actions {
+margin-top:30px;
 }
 
-.hero p {
-color:#ccc;
-max-width:600px;
-margin:auto;
+.button {
+background:gold;
+color:black;
+padding:12px 18px;
+margin:10px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+font-weight:bold;
 }
 
 /* CARDS */
@@ -37,39 +44,29 @@ margin:auto;
 display:flex;
 justify-content:center;
 gap:30px;
-padding:60px 20px;
+margin:50px 20px;
 flex-wrap:wrap;
 }
 
 .card {
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.1);
-padding:30px;
+background:#111;
+padding:25px;
 width:260px;
-border-radius:12px;
-transition:0.3s;
+border-radius:10px;
 }
 
-.card:hover {
-border-color:gold;
-transform:translateY(-5px);
-}
-
-.card h2 { color:gold; }
+.card:hover { border:1px solid gold; }
 
 a { text-decoration:none; color:white; }
 
-/* WHATSAPP */
+/* WhatsApp */
 .whatsapp {
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:white;
-padding:16px;
+padding:15px;
 border-radius:50%;
-font-size:18px;
 }
 </style>
 </head>
@@ -77,8 +74,13 @@ font-size:18px;
 <body>
 
 <div class="hero">
-<h1>Willpower Opportunities</h1>
-<p>Premium curated deals across India. Distilleries, land & high-value investments.</p>
+<h1>Willpower Deal Exchange</h1>
+<p>India’s curated platform for high-value business & real estate deals.</p>
+
+<div class="actions">
+<a class="button" href="post-requirement.html">Post Requirement</a>
+<a class="button" href="list-deal.html">List Your Deal</a>
+</div>
 </div>
 
 <div class="cards">
@@ -86,14 +88,14 @@ font-size:18px;
 <a href="business.html">
 <div class="card">
 <h2>Business Deals</h2>
-<p>Distilleries & manufacturing units</p>
+<p>Distilleries & manufacturing</p>
 </div>
 </a>
 
 <a href="realestate.html">
 <div class="card">
 <h2>Real Estate</h2>
-<p>Land & development opportunities</p>
+<p>Land & development</p>
 </div>
 </a>
 
