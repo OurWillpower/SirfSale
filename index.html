@@ -1,137 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willpower Deal Exchange</title>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 body {
 margin:0;
-font-family:Arial;
-background:#000;
-color:white;
+font-family:'Inter', sans-serif;
+background:#0b0b0b;
+color:#eaeaea;
+}
+
+/* NAV */
+.nav {
+display:flex;
+justify-content:space-between;
+padding:25px 50px;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+font-family:'Playfair Display', serif;
+color:#d4af37;
+font-size:20px;
 }
 
 /* HERO */
 .hero {
 height:100vh;
-background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80') center/cover;
+background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:20px;
+position:relative;
+}
+
+.hero::after {
+content:'';
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content {
+position:relative;
+z-index:2;
+max-width:700px;
 }
 
 .hero h1 {
-font-size:42px;
-color:gold;
-margin-bottom:10px;
+font-family:'Playfair Display', serif;
+font-size:52px;
+color:white;
+margin-bottom:15px;
 }
 
 .hero p {
-color:#ddd;
-max-width:600px;
+color:#bbb;
+font-size:16px;
 }
 
-/* BUTTONS */
 .actions {
 margin-top:25px;
 }
 
 .button {
-background:gold;
-color:black;
-padding:12px 18px;
-margin:10px;
-border-radius:6px;
+border:1px solid #d4af37;
+color:#d4af37;
+padding:12px 22px;
+margin:8px;
 text-decoration:none;
-font-weight:bold;
-}
-
-/* TICKER */
-.ticker {
-background:#111;
-color:gold;
-padding:10px 0;
-overflow:hidden;
-white-space:nowrap;
-}
-
-.ticker span {
 display:inline-block;
-padding-left:100%;
-animation:scroll 15s linear infinite;
+transition:0.3s;
 }
 
-@keyframes scroll {
-0% { transform:translateX(0); }
-100% { transform:translateX(-100%); }
+.button:hover {
+background:#d4af37;
+color:black;
+}
+
+/* SECTION */
+.section {
+max-width:1100px;
+margin:80px auto;
+padding:0 20px;
 }
 
 /* FEATURED */
 .featured {
-max-width:1100px;
-margin:50px auto;
-background:#111;
-border-radius:12px;
-overflow:hidden;
-border:1px solid #222;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:30px;
+align-items:center;
 }
 
 .featured img {
 width:100%;
-height:300px;
-object-fit:cover;
-}
-
-.featured-content {
-padding:20px;
+border-radius:6px;
 }
 
 .featured h2 {
-color:gold;
-margin:0;
+font-family:'Playfair Display', serif;
+color:#d4af37;
 }
 
 .price {
-font-size:24px;
+font-size:22px;
 margin:10px 0;
 }
 
-.button2 {
-background:gold;
-color:black;
-padding:10px 15px;
-border-radius:6px;
-text-decoration:none;
-}
-
-/* CATEGORY */
-.section {
-padding:40px 20px;
-text-align:center;
-}
-
+/* CARDS */
 .cards {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
-max-width:1000px;
-margin:auto;
+margin-top:40px;
 }
 
 .card {
-background:#111;
+border:1px solid rgba(255,255,255,0.08);
 padding:25px;
-border-radius:10px;
-border:1px solid #222;
+transition:0.3s;
 }
 
 .card:hover {
-border-color:gold;
+border-color:#d4af37;
+}
+
+.card h3 {
+font-family:'Playfair Display', serif;
+color:#d4af37;
 }
 
 /* WHATSAPP */
@@ -140,42 +144,44 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:15px;
+padding:14px;
 border-radius:50%;
 }
 </style>
-
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+<div class="logo">Willpower Exchange</div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-<h1>India’s Curated Deal Exchange</h1>
-<p>High-value businesses, land parcels and strategic investments across India</p>
+<div class="hero-content">
+<h1>Curated Investment Opportunities</h1>
+<p>Exclusive access to high-value business and real estate deals across India</p>
 
 <div class="actions">
 <a class="button" href="post-requirement.html">Post Requirement</a>
 <a class="button" href="list-deal.html">List Your Deal</a>
 </div>
 </div>
-
-<!-- TICKER -->
-<div class="ticker">
-<span>🔥 Goa Distillery ₹42 Cr | 🚀 North Goa Factory ₹22 Cr | 💎 Goa Land ₹104 Cr | 📈 Bangalore Distillery ₹125 Cr</span>
 </div>
 
-<!-- FEATURED DEAL -->
+<!-- FEATURED -->
+<div class="section">
+
 <div class="featured">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80">
 
-<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80">
-
-<div class="featured-content">
-<h2>Featured: Prime 10 Acre Land – North Goa</h2>
+<div>
+<h2>Prime Land – North Goa</h2>
 <div class="price">₹1,04,00,00,000</div>
-<p>40,000 sqm | Settlement Zone | Clear Title | JV Available</p>
-
-<a class="button2" href="goa-land.html">View Deal</a>
+<p>10 Acres | Settlement Zone | Clear Title | JV Available</p>
+<a class="button" href="goa-land.html">View Details</a>
+</div>
 </div>
 
 </div>
@@ -183,20 +189,18 @@ border-radius:50%;
 <!-- CATEGORY -->
 <div class="section">
 
-<h2 style="color:gold;">Explore Opportunities</h2>
-
 <div class="cards">
 
 <a href="business.html">
 <div class="card">
-<h3 style="color:gold;">Business Deals</h3>
+<h3>Business Deals</h3>
 <p>Distilleries & manufacturing units</p>
 </div>
 </a>
 
 <a href="realestate.html">
 <div class="card">
-<h3 style="color:gold;">Real Estate</h3>
+<h3>Real Estate</h3>
 <p>Land & development opportunities</p>
 </div>
 </a>
