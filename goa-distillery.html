@@ -5,25 +5,34 @@
 <title>Goa Distillery</title>
 
 <style>
-body { background:#0b0b0b; color:white; font-family:Arial; margin:0; }
+body { background:#000; color:white; font-family:'Segoe UI'; margin:0; }
 
 .topbar { padding:15px; }
 .topbar a { color:gold; }
 
-.container { width:90%; margin:auto; }
+.container { width:90%; margin:auto; max-width:1000px; }
+
+.hero {
+height:250px;
+background:url('https://images.unsplash.com/photo-1565514020179-026b92b2d2c4') center/cover;
+border-radius:12px;
+margin-bottom:20px;
+}
 
 h1 { color:gold; }
 
 .price { color:gold; font-size:24px; }
 
+.section { margin-top:20px; }
+
 .button {
 background:gold;
 color:black;
-padding:10px;
-display:inline-block;
-margin-top:15px;
+padding:12px;
 border-radius:6px;
 text-decoration:none;
+display:inline-block;
+margin-top:20px;
 }
 
 .whatsapp {
@@ -31,11 +40,11 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:white;
 padding:15px;
 border-radius:50%;
 }
 </style>
+
 </head>
 
 <body>
@@ -46,12 +55,28 @@ border-radius:50%;
 
 <div class="container">
 
+<div class="hero"></div>
+
 <h1>Goa Distillery</h1>
 <div class="price">₹42 Cr</div>
 
-<p>30-year legacy unit near Goa airport.</p>
+<div class="section">
+<h3>Overview</h3>
+<p>Established 30-year distillery located in Goa industrial zone.</p>
+</div>
 
-<a class="button" href="https://wa.me/917039196489">Contact</a>
+<div class="section">
+<h3>Highlights</h3>
+<ul>
+<li>Prime location</li>
+<li>Existing infrastructure</li>
+<li>High relaunch potential</li>
+</ul>
+</div>
+
+<a class="button" href="https://wa.me/917039196489">
+Contact on WhatsApp
+</a>
 
 </div>
 
