@@ -5,7 +5,7 @@
 <title>Real Estate Deals</title>
 
 <style>
-body { background:#0b0b0b; color:white; font-family:'Segoe UI'; margin:0; }
+body { background:#0b0b0b; color:white; font-family:Arial; margin:0; }
 
 .topbar { padding:15px; }
 .topbar a { color:gold; text-decoration:none; }
@@ -14,46 +14,35 @@ body { background:#0b0b0b; color:white; font-family:'Segoe UI'; margin:0; }
 
 h1 { color:gold; text-align:center; }
 
-.filters {
-display:flex; gap:10px; justify-content:center;
-flex-wrap:wrap; margin-bottom:20px;
-}
-
-input, select {
-padding:10px; border-radius:6px; border:none;
-}
-
-.grid {
-display:flex; flex-wrap:wrap; gap:20px;
-}
-
 .card {
-background:#111; border:1px solid #222;
-padding:20px; border-radius:10px;
-width:calc(50% - 20px);
+background:#111;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
 }
 
-.card:hover { border-color:gold; }
-
-.price { color:gold; font-size:20px; }
+.price { color:gold; }
 
 .button {
-background:gold; color:black;
-padding:10px; display:inline-block;
-margin-top:10px; border-radius:6px;
+background:gold;
+color:black;
+padding:10px;
+display:inline-block;
+margin-top:10px;
+border-radius:6px;
 text-decoration:none;
 }
 
-/* WhatsApp */
 .whatsapp {
-position:fixed; bottom:20px; right:20px;
-background:#25D366; color:white;
-padding:15px; border-radius:50%;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
 }
-
-@media(max-width:768px){ .card{ width:100%; } }
 </style>
-
 </head>
 
 <body>
@@ -66,20 +55,16 @@ padding:15px; border-radius:50%;
 
 <h1>Real Estate Deals</h1>
 
-<div class="grid">
-
 <div class="card">
 <h3>10 Acre Land – North Goa</h3>
-<p>40,000 sqm | Settlement Zone | JV possible</p>
+<p>40,000 sqm | Settlement Zone</p>
 <div class="price">₹104 Cr</div>
-<a class="button" href="lead.html">Enquire</a>
+<a class="button" href="goa-land.html">View Details</a>
 </div>
 
 </div>
 
-</div>
-
-<a class="whatsapp" href="https://wa.me/917039196489" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/917039196489">💬</a>
 
 </body>
 </html>
