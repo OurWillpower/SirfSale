@@ -1,20 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willpower Deal Exchange</title>
 
 <style>
 * { box-sizing: border-box; }
 
 body {
-margin:0;
-font-family: 'Inter', Arial, sans-serif;
-background:#0a0a0a;
-color:white;
+margin: 0;
+font-family: Arial, sans-serif;
+background: #0a0a0a;
+color: white;
 }
 
 /* HEADER */
 .header {
-display:flex;
-justify-content:space
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+border-bottom: 1px solid #222;
+}
+
+.logo {
+color: gold;
+font-size: 20px;
+font-weight: bold;
+}
+
+/* HERO */
+.hero {
+text-align: center;
+padding: 80px 20px 40px;
+}
+
+.hero h1 {
+font-size: 40px;
+color: gold;
+margin-bottom: 10px;
+}
+
+.hero p {
+color: #aaa;
+max-width: 600px;
+margin: auto;
+}
+
+/* ACTION BUTTONS */
+.actions {
+margin-top: 25px;
+}
+
+.button {
+background: gold;
+color: black;
+padding: 12px 18px;
+margin: 10px;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+}
+
+/* CARDS */
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+padding: 40px;
+max-width: 1000px;
+margin: auto;
+}
+
+.card {
+background: #111;
+padding: 25px;
+border-radius: 12px;
+border: 1px solid #222;
+transition: 0.3s;
+}
+
+.card:hover {
+border-color: gold;
+transform: translateY(-5px);
+}
+
+.card h2 {
+color: gold;
+margin-bottom: 10px;
+}
+
+.card p {
+color: #bbb;
+}
+
+/* WHATSAPP */
+.whatsapp {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+padding: 14px;
+border-radius: 50%;
+text-decoration: none;
+font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+<div class="logo">Willpower Deal Exchange</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Curated High-Value Deals</h1>
+<p>Distilleries, land parcels and strategic investments across India</p>
+
+<div class="actions">
+<a class="button" href="post-requirement.html">Post Requirement</a>
+<a class="button" href="list-deal.html">List Your Deal</a>
+</div>
+</div>
+
+<!-- CATEGORY -->
+<div class="cards">
+
+<a href="business.html">
+<div class="card">
+<h2>Business Deals</h2>
+<p>Distilleries & manufacturing units</p>
+</div>
+</a>
+
+<a href="realestate.html">
+<div class="card">
+<h2>Real Estate</h2>
+<p>Land & development opportunities</p>
+</div>
+</a>
+
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/917039196489">💬</a>
+
+</body>
+</html>
