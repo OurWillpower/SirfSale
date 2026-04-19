@@ -16,38 +16,39 @@ body {
 /* HEADER */
 .header {
     text-align: center;
-    padding: 40px 20px;
-    border-bottom: 1px solid #222;
+    padding: 60px 20px;
 }
 
 .header h1 {
     color: gold;
-    font-size: 34px;
+    font-size: 36px;
 }
 
 .subtitle {
     color: #aaa;
+    max-width: 600px;
+    margin: auto;
 }
 
-/* CATEGORY INDEX */
-.categories {
-    padding: 40px 20px;
+/* CATEGORY SECTION */
+.section {
     text-align: center;
+    padding: 40px 20px;
 }
 
 .cards {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .card {
     background: #111;
     border: 1px solid #222;
-    padding: 25px;
-    width: 240px;
-    border-radius: 10px;
+    padding: 30px;
+    width: 260px;
+    border-radius: 12px;
     transition: 0.3s;
 }
 
@@ -60,70 +61,35 @@ body {
     color: gold;
 }
 
-/* FEATURED DEAL */
-.featured {
-    margin: 30px;
-    padding: 30px;
-    border: 1px solid gold;
-    border-radius: 12px;
-    background: #111;
+.card p {
+    color: #bbb;
 }
 
-.featured h2 {
-    color: gold;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.price {
-    color: gold;
-    font-size: 22px;
-    margin-top: 10px;
+/* CTA */
+.cta {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .button {
-    display: inline-block;
     background: gold;
     color: black;
-    padding: 10px 15px;
-    margin-top: 15px;
+    padding: 12px 18px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* GRID */
-.section {
-    padding: 30px;
-}
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.deal-card {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 10px;
-    padding: 20px;
-    width: calc(50% - 20px);
-}
-
-.deal-card h3 {
-    color: gold;
-}
-
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 30px;
     color: #777;
-    border-top: 1px solid #222;
-}
-
-@media (max-width: 768px) {
-    .deal-card {
-        width: 100%;
-    }
 }
 </style>
 </head>
@@ -133,95 +99,42 @@ body {
 <!-- HEADER -->
 <div class="header">
 <h1>Willpower Opportunities</h1>
-<p class="subtitle">Curated High-Value Deals | Direct Mandate | India</p>
+<p class="subtitle">
+Confidential, high-value investment opportunities across India.  
+Curated for serious investors, builders and strategic buyers.
+</p>
 </div>
 
 <!-- CATEGORY INDEX -->
-<div class="categories">
+<div class="section">
 
 <div class="cards">
 
 <a href="business.html">
 <div class="card">
 <h2>Business for Sale</h2>
-<p>Distilleries, manufacturing units & businesses</p>
+<p>Distilleries, manufacturing units & operational businesses</p>
 </div>
 </a>
 
 <a href="realestate.html">
 <div class="card">
 <h2>Real Estate</h2>
-<p>Land parcels, JV & development opportunities</p>
+<p>Land parcels, JV opportunities & development assets</p>
 </div>
 </a>
 
 </div>
 
-</div>
-
-<!-- FEATURED DEAL -->
-<div class="featured">
-
-<h2>Featured Deal: 10 Acre Land – North Goa</h2>
-
-<ul>
-<li>40,000 sqm | Settlement Zone</li>
-<li>Clear title | Single owner</li>
-<li>JV & outright options</li>
-</ul>
-
-<div class="price">₹104 Crore</div>
-
-<p style="color:#aaa;">Active discussions in progress</p>
-
-<a class="button" href="lead.html?deal=Goa Land Featured">
-Unlock Full Details
-</a>
-
-</div>
-
-<!-- QUICK VIEW DEALS -->
-<div class="section">
-
-<h2 style="color:gold;">Live Opportunities</h2>
-
-<div class="grid">
-
-<div class="deal-card">
-<h3>Goa Distillery</h3>
-<p>30-year legacy unit</p>
-<div class="price">₹42 Cr</div>
-<a class="button" href="lead.html?deal=Goa Distillery">Enquire</a>
-</div>
-
-<div class="deal-card">
-<h3>North Goa Factory</h3>
-<p>High capacity bottling plant</p>
-<div class="price">₹22 Cr</div>
-<a class="button" href="lead.html?deal=North Goa Factory">Enquire</a>
-</div>
-
-<div class="deal-card">
-<h3>South Goa Unit</h3>
-<p>4000 cases/day capacity</p>
-<div class="price">₹12 Cr</div>
-<a class="button" href="lead.html?deal=South Goa Unit">Enquire</a>
-</div>
-
-<div class="deal-card">
-<h3>Bangalore Distillery</h3>
-<p>Integrated facility + strong brands</p>
-<div class="price">₹125 Cr</div>
-<a class="button" href="lead.html?deal=Bangalore Distillery">Enquire</a>
-</div>
-
+<div class="cta">
+<a class="button" href="lead.html">Request Confidential Access</a>
 </div>
 
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-<p>Confidential Listings | Willpower</p>
+<p>Direct Mandate Listings | Willpower</p>
 </div>
 
 </body>
