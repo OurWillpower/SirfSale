@@ -5,9 +5,14 @@
 <title>Post Requirement</title>
 
 <style>
-body { background:#000; color:white; font-family:'Segoe UI'; }
+body { background:#000; color:white; font-family:'Segoe UI'; margin:0; }
 
-.container { width:90%; max-width:600px; margin:auto; padding:40px; }
+.topbar { padding:15px; }
+.topbar a { color:gold; text-decoration:none; }
+
+.container { width:90%; max-width:600px; margin:auto; padding:30px; }
+
+h2 { color:gold; }
 
 input, select, textarea {
 width:100%;
@@ -22,28 +27,53 @@ background:gold;
 padding:12px;
 border:none;
 font-weight:bold;
+cursor:pointer;
 }
 </style>
+
+<script>
+function submitForm() {
+var name = document.getElementById("name").value;
+var budget = document.getElementById("budget").value;
+var location = document.getElementById("location").value;
+
+var msg = "Requirement Posted:%0AName: " + name +
+"%0ABudget: " + budget +
+"%0ALocation: " + location;
+
+window.location.href = "https://wa.me/917039196489?text=" + msg;
+}
+</script>
+
 </head>
 
 <body>
 
+<div class="topbar">
+<a href="index.html">← Home</a>
+</div>
+
 <div class="container">
 
-<h2 style="color:gold;">Post Your Requirement</h2>
+<h2>Post Your Requirement</h2>
 
-<input placeholder="Your Name">
-<select>
+<input id="name" placeholder="Your Name">
+
+<select id="profile">
 <option>Investor</option>
 <option>Broker</option>
 <option>Builder</option>
 </select>
 
-<input placeholder="Budget (₹)">
-<input placeholder="Location Preference">
-<textarea placeholder="What are you looking for?"></textarea>
+<input id="budget" placeholder="Budget (₹ e.g. 50,00,00,000)">
+<input id="location" placeholder="Preferred Location">
 
-<button onclick="alert('We will contact you shortly')">Submit</button>
+<textarea placeholder="Describe your requirement"></textarea>
+
+<label>Upload Reference Images (Optional)</label>
+<input type="file" multiple>
+
+<button onclick="submitForm()">Submit</button>
 
 </div>
 
