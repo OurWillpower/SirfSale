@@ -8,7 +8,7 @@
 body {
 background:#0b0b0b;
 color:white;
-font-family:'Segoe UI';
+font-family:Arial;
 margin:0;
 }
 
@@ -23,42 +23,59 @@ font-weight:bold;
 
 .container {
 width:90%;
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:20px 0;
+padding:20px;
 }
 
 h1 { color:gold; }
 
-.section {
-margin-top:25px;
+.price {
+color:gold;
+font-size:26px;
+margin-bottom:15px;
 }
 
 .tag {
 display:inline-block;
 background:rgba(255,215,0,0.1);
-padding:5px 10px;
-margin:5px;
+padding:6px 10px;
+margin:4px;
 border-radius:6px;
 }
 
-.price {
-color:gold;
-font-size:24px;
-margin-top:10px;
+/* IMAGES */
+.gallery {
+display:flex;
+gap:10px;
+overflow-x:auto;
+margin:20px 0;
+}
+.gallery img {
+height:160px;
+border-radius:8px;
 }
 
+/* SECTIONS */
+.section {
+margin-top:25px;
+}
+.section h3 {
+color:gold;
+}
+
+/* BUTTON */
 .button {
 background:gold;
 color:black;
-padding:12px 18px;
+padding:12px 16px;
 border-radius:6px;
 text-decoration:none;
 display:inline-block;
-margin-top:20px;
+margin-top:15px;
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp {
 position:fixed;
 bottom:20px;
@@ -89,30 +106,23 @@ text-decoration:none;
 
 <div class="price">₹42 Crore (Negotiable)</div>
 
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1565514020179-026b92b2d2c4">
+<img src="https://images.unsplash.com/photo-1581090700227-1e8b7e9b2d65">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+</div>
+
 <div class="section">
 <h3>Overview</h3>
-<p>
-Established distillery located in prime industrial zone in Goa with 30+ years operating history.  
-Currently non-operational, offering strong turnaround potential.
-</p>
+<p>Established distillery with 30+ years history located in Goa industrial estate. Ready for relaunch.</p>
 </div>
 
 <div class="section">
 <h3>Key Highlights</h3>
 <ul>
-<li>Strategic location near airport</li>
-<li>Established licensing history</li>
-<li>Suitable for brand relaunch or contract manufacturing</li>
-<li>Existing infrastructure in place</li>
-</ul>
-</div>
-
-<div class="section">
-<h3>Ideal Buyer</h3>
-<ul>
-<li>Liquor brands looking for expansion</li>
-<li>Investors entering alco-bev sector</li>
-<li>Contract manufacturing operators</li>
+<li>Prime location near airport</li>
+<li>Existing setup</li>
+<li>Strong brand potential</li>
 </ul>
 </div>
 
