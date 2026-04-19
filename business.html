@@ -5,89 +5,49 @@
 <title>Business Deals</title>
 
 <style>
-body { background:#0b0b0b; color:white; font-family:'Segoe UI'; margin:0; }
+body { background:#0b0b0b; color:white; font-family:Arial; margin:0; }
 
 .topbar { padding:15px; }
-.topbar a { color:gold; text-decoration:none; font-weight:bold; }
+.topbar a { color:gold; text-decoration:none; }
 
 .container { width:90%; margin:auto; }
 
 h1 { color:gold; text-align:center; }
 
-.filters {
-display:flex; gap:10px; justify-content:center;
-flex-wrap:wrap; margin-bottom:20px;
-}
-
-input, select {
-padding:10px; border-radius:6px; border:none;
-}
-
-.grid {
-display:flex; flex-wrap:wrap; gap:20px;
-}
+.grid { display:flex; flex-wrap:wrap; gap:20px; }
 
 .card {
-background:#111; border:1px solid #222;
-padding:20px; border-radius:10px;
+background:#111;
+padding:20px;
+border-radius:10px;
 width:calc(50% - 20px);
 }
 
-.card:hover { border-color:gold; }
+.card:hover { border:1px solid gold; }
 
-.price { color:gold; font-size:20px; }
+.price { color:gold; }
 
 .button {
-background:gold; color:black;
-padding:10px; display:inline-block;
-margin-top:10px; border-radius:6px;
+background:gold;
+color:black;
+padding:10px;
+display:inline-block;
+margin-top:10px;
+border-radius:6px;
 text-decoration:none;
 }
 
 /* WhatsApp */
 .whatsapp {
-position:fixed; bottom:20px; right:20px;
-background:#25D366; color:white;
-padding:15px; border-radius:50%;
-text-decoration:none;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
 }
-
-@media(max-width:768px){ .card{ width:100%; } }
 </style>
-
-<script>
-function filterDeals() {
-let search = document.getElementById("search").value.toLowerCase();
-let location = document.getElementById("location").value;
-let cards = document.getElementsByClassName("card");
-
-for (let i = 0; i < cards.length; i++) {
-let text = cards[i].innerText.toLowerCase();
-let loc = cards[i].getAttribute("data-location");
-
-let show = true;
-
-if (!text.includes(search)) show = false;
-if (location !== "all" && loc !== location) show = false;
-
-cards[i].style.display = show ? "block" : "none";
-}
-}
-
-function sortDeals() {
-let grid = document.getElementById("grid");
-let cards = Array.from(grid.children);
-
-cards.sort((a, b) => {
-let p1 = parseInt(a.getAttribute("data-price"));
-let p2 = parseInt(b.getAttribute("data-price"));
-return p2 - p1;
-});
-
-grid.innerHTML = "";
-cards.forEach(c => grid.appendChild(c));
-}
-</script>
 
 </head>
 
@@ -101,49 +61,37 @@ cards.forEach(c => grid.appendChild(c));
 
 <h1>Business Deals</h1>
 
-<div class="filters">
-<input type="text" id="search" placeholder="Search..." onkeyup="filterDeals()">
+<div class="grid">
 
-<select id="location" onchange="filterDeals()">
-<option value="all">All Locations</option>
-<option value="goa">Goa</option>
-<option value="bangalore-distillery.html">bangalore-distillery.html</option>
-</select>
-
-<button onclick="sortDeals()">Sort Price ↓</button>
-</div>
-
-<div class="grid" id="grid">
-
-<div class="card" data-location="goa" data-price="42">
-<h3>goa-distillery.html</h3>
+<div class="card">
+<h3>Goa Distillery</h3>
 <div class="price">₹42 Cr</div>
-<a class="button" href="goa-distillery.html">Enquire</a>
+<a class="button" href="goa-distillery.html">View Details</a>
 </div>
 
-<div class="card" data-location="goa" data-price="22">
-<h3>north-goa-factory.html Factory</h3>
+<div class="card">
+<h3>North Goa Factory</h3>
 <div class="price">₹22 Cr</div>
-<a class="button" href="goa-distillery.html">Enquire</a>
+<a class="button" href="north-goa-factory.html">View Details</a>
 </div>
 
-<div class="card" data-location="goa" data-price="12">
-<h3>south-goa-unit.html Unit</h3>
+<div class="card">
+<h3>South Goa Unit</h3>
 <div class="price">₹12 Cr</div>
-<a class="button" href="goa-distillery.html">Enquire</a>
+<a class="button" href="south-goa-unit.html">View Details</a>
 </div>
 
-<div class="card" data-location="bangalore-distillery.html" data-price="125">
-<h3>bangalore-distillery.html Distillery</h3>
+<div class="card">
+<h3>Bangalore Distillery</h3>
 <div class="price">₹125 Cr</div>
-<a class="button" href="goa-distillery.html">Enquire</a>
+<a class="button" href="bangalore-distillery.html">View Details</a>
 </div>
 
 </div>
 
 </div>
 
-<a class="whatsapp" href="https://wa.me/917039196489" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/917039196489">💬</a>
 
 </body>
 </html>
