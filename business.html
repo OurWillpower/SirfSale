@@ -13,11 +13,23 @@ body {
     margin: 0;
 }
 
+/* TOP BAR */
+.topbar {
+    padding: 15px;
+}
+
+.home-btn {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTAINER */
 .container {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 h1 {
@@ -25,7 +37,7 @@ h1 {
     text-align: center;
 }
 
-/* FILTER BAR */
+/* FILTERS */
 .filters {
     display: flex;
     justify-content: center;
@@ -79,6 +91,19 @@ select {
     text-decoration: none;
 }
 
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .card {
         width: 100%;
@@ -99,13 +124,8 @@ function filterDeals() {
 
         let show = true;
 
-        if (location !== "all" && loc !== location) {
-            show = false;
-        }
-
-        if (price !== "all" && pr !== price) {
-            show = false;
-        }
+        if (location !== "all" && loc !== location) show = false;
+        if (price !== "all" && pr !== price) show = false;
 
         cards[i].style.display = show ? "block" : "none";
     }
@@ -116,13 +136,15 @@ function filterDeals() {
 
 <body>
 
+<div class="topbar">
+<a class="home-btn" href="index.html">← Back to Home</a>
+</div>
+
 <div class="container">
 
 <h1>Business for Sale</h1>
 
-<!-- FILTERS -->
 <div class="filters">
-
 <select id="locationFilter" onchange="filterDeals()">
 <option value="all">All Locations</option>
 <option value="goa">Goa</option>
@@ -135,43 +157,40 @@ function filterDeals() {
 <option value="mid">₹20–50 Cr</option>
 <option value="high">₹50 Cr+</option>
 </select>
-
 </div>
 
-<!-- DEALS -->
 <div class="grid">
 
 <div class="card" data-location="goa" data-price="mid">
-<h3>Goa Distillery (Near Old Airport)</h3>
-<p>30-year legacy unit, industrial estate location</p>
-<div class="price">₹42 Crore</div>
+<h3>Goa Distillery</h3>
+<div class="price">₹42 Cr</div>
 <a class="button" href="lead.html">Enquire</a>
 </div>
 
 <div class="card" data-location="goa" data-price="mid">
-<h3>North Goa Factory – Pernem</h3>
-<p>High capacity plant, near Mopa Airport</p>
-<div class="price">₹22 Crore</div>
+<h3>North Goa Factory</h3>
+<div class="price">₹22 Cr</div>
 <a class="button" href="lead.html">Enquire</a>
 </div>
 
 <div class="card" data-location="goa" data-price="low">
-<h3>South Goa Small Unit</h3>
-<p>1000 sqm unit, 4000 cases/day</p>
-<div class="price">₹12 Crore</div>
+<h3>South Goa Unit</h3>
+<div class="price">₹12 Cr</div>
 <a class="button" href="lead.html">Enquire</a>
 </div>
 
 <div class="card" data-location="bangalore" data-price="high">
-<h3>Bangalore Integrated Distillery</h3>
-<p>120 acre + 4 acre campus, strong brands</p>
-<div class="price">₹125 Crore</div>
+<h3>Bangalore Distillery</h3>
+<div class="price">₹125 Cr</div>
 <a class="button" href="lead.html">Enquire</a>
 </div>
 
 </div>
 
 </div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp-float" href="https://wa.me/917039196489" target="_blank">💬</a>
 
 </body>
 </html>
