@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confidential Access | Willpower</title>
+
+<style>
+body {
+    background: #0b0b0b;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    border: 1px solid #222;
+}
+
+h2 {
+    color: gold;
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: gold;
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.note {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+}
+</style>
+
+<script>
+function submitForm() {
+
+    var name = document.getElementById("name").value;
+    var type = document.getElementById("type").value;
+    var budget = document.getElementById("budget").value;
+
+    if(name === "" || type === "" || budget === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    var message = "Hi, I am " + name +
+                  ". I am a " + type +
+                  " with budget " + budget +
+                  ". I am interested in your deals listed under Willpower Opportunities.";
+
+    var url = "https://wa.me/917039196489?text=" + encodeURIComponent(message);
+
+    window.location.href = url;
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Confidential Access</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<select id="type">
+<option value="">Select Profile</option>
+<option>Investor</option>
+<option>Broker</option>
+<option>Builder</option>
+<option>Corporate Buyer</option>
+</select>
+
+<select id="budget">
+<option value="">Select Investment Budget</option>
+<option>₹5 - 20 Crore</option>
+<option>₹20 - 50 Crore</option>
+<option>₹50 - 100 Crore</option>
+<option>₹100 Crore+</option>
+</select>
+
+<button onclick="submitForm()">Unlock Deals & Enquire</button>
+
+<p class="note">Only serious enquiries. Direct mandate deals via Willpower.</p>
+
+</div>
+
+</body>
+</html>
