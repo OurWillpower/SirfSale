@@ -3,164 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Deals | Willpower</title>
+<title>Business Deals</title>
 
 <style>
-body {
-margin:0;
-font-family:Arial;
-background:#0b0b0b;
-color:white;
-}
+body{margin:0;background:#000;color:white;font-family:Arial;}
+.topbar{padding:20px;border-bottom:1px solid #222;}
+.topbar a{color:gold;text-decoration:none;}
+h1{text-align:center;color:gold;}
 
-/* TOP BAR */
-.topbar {
-padding:20px;
-border-bottom:1px solid #222;
-}
-.topbar a {
-color:gold;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* TITLE */
-h1 {
-text-align:center;
-color:gold;
-margin:30px 0;
-font-size:32px;
-}
-
-/* GRID */
-.grid {
+.grid{
 display:grid;
-grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
 padding:30px;
-max-width:1200px;
-margin:auto;
 }
 
-/* CARD */
-.card {
-position:relative;
-border-radius:16px;
-overflow:hidden;
-cursor:pointer;
-transition:0.4s;
+.card{position:relative;border-radius:14px;overflow:hidden;}
+.card img{width:100%;height:260px;object-fit:cover;}
+
+.overlay{
+position:absolute;bottom:0;width:100%;padding:20px;
+background:linear-gradient(to top,rgba(0,0,0,0.9),transparent);
 }
 
-.card:hover {
-transform:scale(1.02);
+.price{color:gold;}
+.badge{
+position:absolute;top:15px;left:15px;
+background:gold;color:black;padding:5px;border-radius:6px;
 }
 
-/* IMAGE */
-.card img {
-width:100%;
-height:260px;
-object-fit:cover;
-display:block;
-}
-
-/* DARK OVERLAY */
-.overlay {
-position:absolute;
-bottom:0;
-width:100%;
-padding:20px;
-background:linear-gradient(to top, rgba(0,0,0,0.95), transparent);
-}
-
-/* TEXT */
-.title {
-font-size:20px;
-font-weight:bold;
-}
-
-.price {
-color:gold;
-font-size:18px;
-margin-top:5px;
-}
-
-/* BADGE */
-.badge {
-position:absolute;
-top:15px;
-left:15px;
-background:gold;
-color:black;
-padding:6px 12px;
-border-radius:6px;
-font-size:12px;
-font-weight:bold;
-}
-
-/* WHATSAPP */
-.whatsapp {
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:14px;
-border-radius:50%;
-}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:14px;border-radius:50%;}
 </style>
 
 </head>
 
 <body>
 
-<div class="topbar">
-<a href="index.html">← Home</a>
-</div>
-
+<div class="topbar"><a href="index.html">← Home</a></div>
 <h1>Business Opportunities</h1>
 
 <div class="grid">
 
-<!-- GOA DISTILLERY -->
 <a href="goa-distillery.html">
 <div class="card">
 <div class="badge">FEATURED</div>
-<img src="https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80">
 <div class="overlay">
-<div class="title">Goa Distillery</div>
+<h3>Goa Distillery</h3>
 <div class="price">₹42,00,00,000</div>
 </div>
 </div>
 </a>
 
-<!-- NORTH GOA -->
 <a href="north-goa-factory.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1597005088764-5a4f5f1a3a3b?auto=format&fit=crop&w=1200&q=80">
 <div class="overlay">
-<div class="title">North Goa Factory</div>
+<h3>North Goa Factory</h3>
 <div class="price">₹22,00,00,000</div>
 </div>
 </div>
 </a>
 
-<!-- SOUTH GOA -->
 <a href="south-goa-unit.html">
 <div class="card">
-<div class="badge">HOT DEAL</div>
-<img src="https://images.unsplash.com/photo-1581091215367-59ab6b4d45c6?auto=format&fit=crop&w=1200&q=80">
+<div class="badge">HOT</div>
+<img src="https://images.unsplash.com/photo-1581091012184-5c1f3c0b6c3c?auto=format&fit=crop&w=1200&q=80">
 <div class="overlay">
-<div class="title">South Goa Unit</div>
+<h3>South Goa Unit</h3>
 <div class="price">₹12,00,00,000</div>
 </div>
 </div>
 </a>
 
-<!-- BANGALORE -->
 <a href="bangalore-distillery.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1565514020179-026b92b2d2c4?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1200&q=80">
 <div class="overlay">
-<div class="title">Bangalore Distillery</div>
+<h3>Bangalore Distillery</h3>
 <div class="price">₹1,25,00,00,000</div>
 </div>
 </div>
