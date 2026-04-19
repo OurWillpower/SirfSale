@@ -13,59 +13,46 @@ body {
     color: white;
 }
 
-/* HERO SECTION */
-.hero {
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0b0b0b),
-    url('https://images.unsplash.com/photo-1565514020179-026b92b2d2c4');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* HEADER */
+.header {
     text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #222;
 }
 
-.hero h1 {
-    font-size: 48px;
+.header h1 {
     color: gold;
+    font-size: 34px;
 }
 
-.hero p {
-    color: #ccc;
-    max-width: 600px;
-}
-
-.cta {
-    margin-top: 20px;
-    background: gold;
-    color: black;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
+.subtitle {
+    color: #aaa;
 }
 
 /* SECTION */
 .section {
-    padding: 60px 20px;
-    text-align: center;
+    padding: 40px 20px;
 }
 
-.cards {
+.section h2 {
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* CARD GRID */
+.grid {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
+/* CARD */
 .card {
     background: #111;
     border: 1px solid #222;
-    padding: 30px;
-    width: 260px;
     border-radius: 12px;
+    padding: 20px;
+    width: calc(50% - 20px);
     transition: 0.3s;
 }
 
@@ -74,13 +61,36 @@ body {
     transform: translateY(-5px);
 }
 
-.card h2 {
+.card h3 {
     color: gold;
+    margin-top: 0;
 }
 
-a {
+.tag {
+    display: inline-block;
+    background: rgba(255,215,0,0.1);
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.price {
+    color: gold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    background: gold;
+    color: black;
+    padding: 10px 15px;
+    margin-top: 12px;
+    border-radius: 6px;
     text-decoration: none;
-    color: inherit;
+    font-weight: bold;
 }
 
 /* FOOTER */
@@ -88,42 +98,116 @@ a {
     text-align: center;
     padding: 30px;
     color: #777;
+    border-top: 1px solid #222;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<!-- HEADER -->
+<div class="header">
 <h1>Willpower Opportunities</h1>
-<p>Curated high-value deals across India. Direct mandate. Confidential access for serious investors.</p>
-<a class="cta" href="lead.html">Request Access</a>
+<p class="subtitle">Curated High-Value Deals | Direct Mandate | India</p>
 </div>
 
-<!-- CATEGORIES -->
+<!-- BUSINESS DEALS -->
 <div class="section">
+<h2>Business for Sale</h2>
 
-<h2 style="color:gold;">Explore Opportunities</h2>
+<div class="grid">
 
-<div class="cards">
-
-<a href="business.html">
 <div class="card">
-<h2>Business Deals</h2>
-<p>Distilleries, manufacturing & operational businesses</p>
-</div>
-</a>
+<h3>Goa Distillery (Near Old Airport)</h3>
+<div class="tag">3 Acres</div>
+<div class="tag">30 Years Legacy</div>
+<div class="tag">Whisky / Rum / Gin</div>
 
-<a href="realestate.html">
+<ul>
+<li>Operational history: 30 years</li>
+<li>Industrial estate location</li>
+<li>Currently inactive</li>
+</ul>
+
+<div class="price">₹42 Crore</div>
+<a class="button" href="lead.html?deal=Goa Distillery">Enquire</a>
+</div>
+
 <div class="card">
-<h2>Real Estate</h2>
-<p>Land parcels, JV opportunities & development assets</p>
+<h3>North Goa Factory – Pernem</h3>
+<div class="tag">High Capacity</div>
+<div class="tag">Airport Proximity</div>
+
+<ul>
+<li>1.5 lakh cases/month</li>
+<li>11 lakh case storage</li>
+<li>2 bottling lines</li>
+</ul>
+
+<div class="price">₹22 Crore</div>
+<a class="button" href="lead.html?deal=North Goa Factory">Enquire</a>
 </div>
-</a>
+
+<div class="card">
+<h3>South Goa Small Unit</h3>
+
+<ul>
+<li>1000 sqm industrial unit</li>
+<li>4000 cases/day capacity</li>
+</ul>
+
+<div class="price">₹12 Crore</div>
+<a class="button" href="lead.html?deal=South Goa Unit">Enquire</a>
+</div>
+
+<div class="card">
+<h3>Bangalore Integrated Distillery</h3>
+
+<ul>
+<li>120 acre + 4 acre campus</li>
+<li>Full production chain</li>
+<li>₹20 Cr annual income</li>
+</ul>
+
+<div class="price">₹125 Crore</div>
+<a class="button" href="lead.html?deal=Bangalore Distillery">Enquire</a>
+</div>
 
 </div>
+</div>
 
+<!-- REAL ESTATE -->
+<div class="section">
+<h2>Real Estate Opportunities</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Prime Land – North Goa (Porvorim)</h3>
+
+<div class="tag">10 Acres</div>
+<div class="tag">Settlement Zone</div>
+<div class="tag">JV Possible</div>
+
+<ul>
+<li>40,000 sqm land</li>
+<li>Clear title | Single owner</li>
+<li>Litigation resolved</li>
+<li>High development potential</li>
+</ul>
+
+<div class="price">₹104 Crore</div>
+<a class="button" href="lead.html?deal=Goa Land 10 Acre">Enquire</a>
+</div>
+
+</div>
 </div>
 
 <!-- FOOTER -->
