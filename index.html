@@ -30,6 +30,27 @@ font-size: 20px;
 font-weight: bold;
 }
 
+/* TICKER */
+.ticker {
+width: 100%;
+overflow: hidden;
+background: #111;
+color: gold;
+padding: 10px 0;
+white-space: nowrap;
+}
+
+.ticker span {
+display: inline-block;
+padding-left: 100%;
+animation: scroll 18s linear infinite;
+}
+
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-100%); }
+}
+
 /* HERO */
 .hero {
 text-align: center;
@@ -64,7 +85,7 @@ font-weight: bold;
 display: inline-block;
 }
 
-/* CARDS */
+/* CATEGORY CARDS */
 .cards {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -117,6 +138,11 @@ font-size: 18px;
 <!-- HEADER -->
 <div class="header">
 <div class="logo">Willpower Deal Exchange</div>
+</div>
+
+<!-- FLASHER -->
+<div class="ticker">
+<span>🔥 Goa Distillery ₹42 Cr | 🚀 North Goa Factory ₹22 Cr | 💎 Goa Land ₹104 Cr | 📈 Bangalore Distillery ₹125 Cr</span>
 </div>
 
 <!-- HERO -->
