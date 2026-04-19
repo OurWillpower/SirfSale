@@ -1,182 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Real Estate Deals | Willpower</title>
+<title>Real Estate Deals</title>
 
 <style>
-body {
-    background: #0b0b0b;
-    color: white;
-    font-family: 'Segoe UI';
-    margin: 0;
-}
+body { background:#0b0b0b; color:white; font-family:'Segoe UI'; margin:0; }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 0;
-}
+.topbar { padding:15px; }
+.topbar a { color:gold; text-decoration:none; }
 
-h1 {
-    color: gold;
-    text-align: center;
-}
+.container { width:90%; margin:auto; }
 
-/* FILTER BAR */
+h1 { color:gold; text-align:center; }
+
 .filters {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+display:flex; gap:10px; justify-content:center;
+flex-wrap:wrap; margin-bottom:20px;
 }
 
-select {
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
+input, select {
+padding:10px; border-radius:6px; border:none;
 }
 
-/* CARDS */
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+display:flex; flex-wrap:wrap; gap:20px;
 }
 
 .card {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 10px;
-    padding: 20px;
-    width: calc(50% - 20px);
+background:#111; border:1px solid #222;
+padding:20px; border-radius:10px;
+width:calc(50% - 20px);
 }
 
-.card:hover {
-    border-color: gold;
-}
+.card:hover { border-color:gold; }
 
-.card h3 {
-    color: gold;
-}
-
-.price {
-    color: gold;
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.tag {
-    display: inline-block;
-    background: rgba(255,215,0,0.1);
-    padding: 5px 10px;
-    margin: 3px;
-    border-radius: 6px;
-    font-size: 12px;
-}
+.price { color:gold; font-size:20px; }
 
 .button {
-    background: gold;
-    color: black;
-    padding: 10px 15px;
-    margin-top: 10px;
-    display: inline-block;
-    border-radius: 6px;
-    text-decoration: none;
+background:gold; color:black;
+padding:10px; display:inline-block;
+margin-top:10px; border-radius:6px;
+text-decoration:none;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-    }
+/* WhatsApp */
+.whatsapp {
+position:fixed; bottom:20px; right:20px;
+background:#25D366; color:white;
+padding:15px; border-radius:50%;
 }
+
+@media(max-width:768px){ .card{ width:100%; } }
 </style>
-
-<script>
-function filterDeals() {
-    let location = document.getElementById("locationFilter").value;
-    let type = document.getElementById("typeFilter").value;
-
-    let cards = document.getElementsByClassName("card");
-
-    for (let i = 0; i < cards.length; i++) {
-        let loc = cards[i].getAttribute("data-location");
-        let typ = cards[i].getAttribute("data-type");
-
-        let show = true;
-
-        if (location !== "all" && loc !== location) {
-            show = false;
-        }
-
-        if (type !== "all" && typ !== type) {
-            show = false;
-        }
-
-        cards[i].style.display = show ? "block" : "none";
-    }
-}
-</script>
 
 </head>
 
 <body>
 
+<div class="topbar">
+<a href="index.html">← Back to Home</a>
+</div>
+
 <div class="container">
 
-<h1>Real Estate Opportunities</h1>
+<h1>Real Estate Deals</h1>
 
-<!-- FILTERS -->
-<div class="filters">
-
-<select id="locationFilter" onchange="filterDeals()">
-<option value="all">All Locations</option>
-<option value="goa">Goa</option>
-<option value="bangalore">Bangalore</option>
-</select>
-
-<select id="typeFilter" onchange="filterDeals()">
-<option value="all">All Types</option>
-<option value="land">Land</option>
-<option value="industrial">Industrial</option>
-<option value="development">Development</option>
-</select>
-
-</div>
-
-<!-- DEALS -->
 <div class="grid">
 
-<!-- GOA LAND -->
-<div class="card" data-location="goa" data-type="land">
-
-<h3>Prime Land – North Goa (Porvorim)</h3>
-
-<div class="tag">10 Acres</div>
-<div class="tag">Settlement Zone</div>
-<div class="tag">JV Possible</div>
-
-<ul>
-<li>40,000 sqm land</li>
-<li>Clear title | Single owner</li>
-<li>Litigation resolved</li>
-<li>Prime development potential</li>
-<li>Near Porvorim & key connectivity</li>
-</ul>
-
-<div class="price">₹104 Crore</div>
-
+<div class="card">
+<h3>10 Acre Land – North Goa</h3>
+<p>40,000 sqm | Settlement Zone | JV possible</p>
+<div class="price">₹104 Cr</div>
 <a class="button" href="lead.html">Enquire</a>
-
 </div>
 
 </div>
 
 </div>
+
+<a class="whatsapp" href="https://wa.me/917039196489" target="_blank">💬</a>
 
 </body>
 </html>
