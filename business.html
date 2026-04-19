@@ -5,35 +5,55 @@
 <title>Business Deals</title>
 
 <style>
-body { background:#0b0b0b; color:white; font-family:Arial; margin:0; }
+body { background:#000; color:white; font-family:'Segoe UI'; margin:0; }
 
 .topbar { padding:15px; }
 .topbar a { color:gold; text-decoration:none; }
 
 .container { width:90%; margin:auto; }
 
-h1 { color:gold; text-align:center; }
+h1 { color:gold; text-align:center; margin:20px; }
 
-.grid { display:flex; flex-wrap:wrap; gap:20px; }
+/* FEATURED */
+.featured {
+background:linear-gradient(135deg,#111,#000);
+border:1px solid gold;
+padding:30px;
+border-radius:12px;
+margin-bottom:30px;
+}
+
+.featured h2 { color:gold; }
+
+/* GRID */
+.grid {
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
 
 .card {
 background:#111;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 width:calc(50% - 20px);
+transition:0.3s;
 }
 
-.card:hover { border:1px solid gold; }
+.card:hover {
+border:1px solid gold;
+transform:translateY(-5px);
+}
 
-.price { color:gold; }
+.price { color:gold; font-size:18px; }
 
 .button {
 background:gold;
 color:black;
 padding:10px;
+border-radius:6px;
 display:inline-block;
 margin-top:10px;
-border-radius:6px;
 text-decoration:none;
 }
 
@@ -42,47 +62,50 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:white;
 padding:15px;
 border-radius:50%;
 }
+
+@media(max-width:768px){ .card{ width:100%; } }
 </style>
+
 </head>
 
 <body>
 
 <div class="topbar">
-<a href="index.html">← Back to Home</a>
+<a href="index.html">← Home</a>
 </div>
 
 <div class="container">
 
 <h1>Business Deals</h1>
 
-<div class="grid">
-
-<div class="card">
-<h3>Goa Distillery</h3>
+<div class="featured">
+<h2>Featured: Goa Distillery</h2>
+<p>30-year legacy unit near airport</p>
 <div class="price">₹42 Cr</div>
 <a class="button" href="goa-distillery.html">View Details</a>
 </div>
 
+<div class="grid">
+
 <div class="card">
 <h3>North Goa Factory</h3>
 <div class="price">₹22 Cr</div>
-<a class="button" href="north-goa-factory.html">View Details</a>
+<a class="button" href="north-goa-factory.html">View</a>
 </div>
 
 <div class="card">
 <h3>South Goa Unit</h3>
 <div class="price">₹12 Cr</div>
-<a class="button" href="south-goa-unit.html">View Details</a>
+<a class="button" href="south-goa-unit.html">View</a>
 </div>
 
 <div class="card">
 <h3>Bangalore Distillery</h3>
 <div class="price">₹125 Cr</div>
-<a class="button" href="bangalore-distillery.html">View Details</a>
+<a class="button" href="bangalore-distillery.html">View</a>
 </div>
 
 </div>
