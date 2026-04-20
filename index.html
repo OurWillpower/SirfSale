@@ -6,43 +6,93 @@
 <title>Willpower Deal Exchange</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#000;color:white;}
-
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80') center/cover;
-display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+body {
+margin:0;
+font-family: Arial;
+background:#0a0a0a;
+color:white;
 }
 
-.hero h1{color:gold;font-size:42px;margin:0;}
-.hero p{color:#ccc;}
-
-.button{
-background:gold;color:black;padding:12px 20px;margin:10px;border-radius:6px;text-decoration:none;
+/* HEADER */
+.header {
+padding:20px;
+border-bottom:1px solid #222;
+color:gold;
+font-weight:bold;
 }
 
-.section{padding:40px;text-align:center;}
-
-.card{
-background:#111;padding:25px;border-radius:10px;border:1px solid #222;margin:10px;
-display:inline-block;width:250px;
+/* HERO */
+.hero {
+text-align:center;
+padding:80px 20px 40px;
 }
 
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:14px;border-radius:50%;}
+.hero h1 {
+font-size:38px;
+color:gold;
+}
+
+.hero p {
+color:#aaa;
+}
+
+/* BUTTONS */
+.button {
+background:gold;
+color:black;
+padding:12px 18px;
+margin:10px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+}
+
+/* CARDS */
+.cards {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:40px;
+max-width:900px;
+margin:auto;
+}
+
+.card {
+background:#111;
+padding:25px;
+border-radius:10px;
+border:1px solid #222;
+text-align:center;
+}
+
+.card:hover { border-color:gold; }
+
+/* WHATSAPP */
+.whatsapp {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+}
 </style>
 
 </head>
 
 <body>
 
+<div class="header">Willpower Deal Exchange</div>
+
 <div class="hero">
 <h1>Curated High-Value Deals</h1>
 <p>Business & real estate opportunities across India</p>
+
 <a class="button" href="post-requirement.html">Post Requirement</a>
 <a class="button" href="list-deal.html">List Deal</a>
 </div>
 
-<div class="section">
+<div class="cards">
 <a href="business.html"><div class="card">Business Deals</div></a>
 <a href="realestate.html"><div class="card">Real Estate</div></a>
 </div>
