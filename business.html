@@ -2,37 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Business Deals</title>
 
 <style>
-body{margin:0;background:#000;color:blue;font-family:Arial;}
+body{margin:0;background:#0a0a0a;color:white;font-family:Arial;}
 .topbar{padding:20px;border-bottom:1px solid #222;}
 .topbar a{color:gold;text-decoration:none;}
-h1{text-align:center;color:gold;}
+h1{text-align:center;color:gold;margin:30px;}
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 padding:30px;
 }
 
-.card{position:relative;border-radius:14px;overflow:hidden;}
-.card img{width:100%;height:260px;object-fit:cover;}
-
-.overlay{
-position:absolute;bottom:0;width:100%;padding:20px;
-background:linear-gradient(to top,rgba(0,0,0,0.9),transparent);
+/* CARD */
+.card{
+background:#111;
+border-radius:10px;
+overflow:hidden;
+border:1px solid #222;
 }
 
-.price{color:gold;}
-.badge{
-position:absolute;top:15px;left:15px;
-background:gold;color:black;padding:5px;border-radius:6px;
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:14px;border-radius:50%;}
+.content{padding:15px;}
+
+.price{color:gold;margin-top:5px;}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+}
 </style>
 
 </head>
@@ -40,51 +50,46 @@ background:gold;color:black;padding:5px;border-radius:6px;
 <body>
 
 <div class="topbar"><a href="index.html">← Home</a></div>
+
 <h1>Business Opportunities</h1>
 
 <div class="grid">
 
-<a href="goa-distillery.html">
 <div class="card">
-<div class="badge">FEATURED</div>
-<img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80">
-<div class="overlay">
+<img src="https://images.unsplash.com/photo-1565514020179-026b92b2d2c4?auto=format&fit=crop&w=1200&q=80">
+<div class="content">
 <h3>Goa Distillery</h3>
 <div class="price">₹42,00,00,000</div>
+<a href="goa-distillery.html">View</a>
 </div>
 </div>
-</a>
 
-<a href="north-goa-factory.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1597005088764-5a4f5f1a3a3b?auto=format&fit=crop&w=1200&q=80">
-<div class="overlay">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
+<div class="content">
 <h3>North Goa Factory</h3>
 <div class="price">₹22,00,00,000</div>
+<a href="north-goa-factory.html">View</a>
 </div>
 </div>
-</a>
 
-<a href="south-goa-unit.html">
 <div class="card">
-<div class="badge">HOT</div>
-<img src="https://images.unsplash.com/photo-1581091012184-5c1f3c0b6c3c?auto=format&fit=crop&w=1200&q=80">
-<div class="overlay">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80">
+<div class="content">
 <h3>South Goa Unit</h3>
 <div class="price">₹12,00,00,000</div>
+<a href="south-goa-unit.html">View</a>
 </div>
 </div>
-</a>
 
-<a href="bangalore-distillery.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1200&q=80">
-<div class="overlay">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
+<div class="content">
 <h3>Bangalore Distillery</h3>
 <div class="price">₹1,25,00,00,000</div>
+<a href="bangalore-distillery.html">View</a>
 </div>
 </div>
-</a>
 
 </div>
 
